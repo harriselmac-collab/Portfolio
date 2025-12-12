@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function CustomCursor() {
@@ -10,9 +10,9 @@ export default function CustomCursor() {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    const springConfig = { damping: 25, stiffness: 150, mass: 0.5 };
-    const cursorX = useSpring(mouseX, springConfig);
-    const cursorY = useSpring(mouseY, springConfig);
+    // const springConfig = { damping: 25, stiffness: 150, mass: 0.5 };
+    // const cursorX = useSpring(mouseX, springConfig);
+    // const cursorY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
         const moveCursor = (e: MouseEvent) => {
@@ -57,8 +57,8 @@ export default function CustomCursor() {
         <motion.div
             className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9999] mix-blend-difference"
             style={{
-                translateX: cursorX,
-                translateY: cursorY,
+                translateX: mouseX,
+                translateY: mouseY,
                 opacity: isVisible ? 1 : 0,
             }}
         >

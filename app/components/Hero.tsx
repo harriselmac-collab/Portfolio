@@ -49,7 +49,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Color Wheels Control Panel */}
-                <div className="flex gap-8 md:gap-16 items-center justify-center mt-8">
+                <div className="flex gap-2 md:gap-16 items-center justify-center mt-8">
                     <ColorWheel label="Lift" color="bg-red-500/20" />
                     <ColorWheel label="Gamma" color="bg-green-500/20" />
                     <ColorWheel label="Gain" color="bg-blue-500/20" />

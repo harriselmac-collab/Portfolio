@@ -18,7 +18,7 @@ export default function ColorWheel({ label, color, delay = 0 }: ColorWheelProps)
             className="flex flex-col items-center gap-4 cursor-pointer group"
         >
             {/* Wheel Graphic */}
-            <div className="relative w-40 h-40 rounded-full border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm shadow-2xl overflow-hidden group-hover:border-neutral-500 transition-colors duration-300">
+            <div className="relative w-24 h-24 md:w-40 md:h-40 rounded-full border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm shadow-2xl overflow-hidden group-hover:border-neutral-500 transition-colors duration-300">
                 {/* Gradient Mesh to simulate color wheel */}
                 <div className={`absolute inset-0 opacity-50 bg-[conic-gradient(from_0deg,red,yellow,lime,cyan,blue,magenta,red)]`} />
                 <div className="absolute inset-2 rounded-full bg-neutral-900 z-10" />
